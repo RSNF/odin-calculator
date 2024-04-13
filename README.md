@@ -1,2 +1,3 @@
-# odin-calculator
-The Odin Project Foundations path last project.
+# Odin Calculator
+
+### Project idea by The Odin Project
