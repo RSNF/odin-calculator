@@ -31,7 +31,13 @@ function Calculator() {
         };
 
         if (this.operator in operations)
-            this.operationLog = Math.floor(operations[this.operator](this.firstOperand, this.secondOperand));
+            this.operationLog = operations[this.operator](this.firstOperand, this.secondOperand);
+
+        if (this.operationLog - Math.floor(this.operationLog) === 0) {
+            this.operationLog = Math.floor(this.operationLog);
+        } else {
+            this.operationLog = Number(this.operationLog.toFixed(2));
+        }
     };
 
     this.getFirstOperand = function() {
