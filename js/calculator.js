@@ -33,6 +33,11 @@ function Calculator() {
         if (this.operator in operations)
             this.operationLog = operations[this.operator](this.firstOperand, this.secondOperand);
 
+        if (Number.isNaN(this.operationLog) || !Number.isFinite(this.operationLog)) {
+            this.operationLog = "ERROR";
+            return;
+        }
+
         if (this.operationLog - Math.floor(this.operationLog) === 0) {
             this.operationLog = Math.floor(this.operationLog);
         } else {
