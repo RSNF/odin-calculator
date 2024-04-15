@@ -61,4 +61,15 @@ buttons.addEventListener("click", (e) => {
     }
 });
 
+window.addEventListener("keydown", (e) => {
+
+    if (e.key === "Backspace") {
+        displayValue = displayValue.slice(0, -1);
+        display.textContent = displayValue;
+    } else if (!Number.isFinite(e.key)) {
+        displayValue = displayValue + e.key;
+        display.textContent = displayValue;
+    }
+})
+
 clear();
