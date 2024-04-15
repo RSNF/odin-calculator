@@ -2,6 +2,7 @@ import { Calculator } from "./calculator.js";
 
 const buttons = document.querySelector(".buttons");
 const display = document.querySelector(".display")
+const notNumber = document.querySelector(".not-number");
 
 const calculator = new Calculator();
 let displayValue = "";
@@ -70,6 +71,10 @@ window.addEventListener("keydown", (e) => {
         displayValue = displayValue + e.key;
         display.textContent = displayValue;
     }
+})
+
+notNumber.addEventListener("click", () => {
+    notNumber.value = ">:(";
 })
 
 clear();
