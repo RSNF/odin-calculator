@@ -66,7 +66,7 @@ window.addEventListener("keydown", (e) => {
     if (e.key === "Backspace") {
         displayValue = displayValue.slice(0, -1);
         display.textContent = displayValue;
-    } else if (!Number.isFinite(e.key)) {
+    } else if (e.key >= "0" && e.key <= "9") {
         displayValue = displayValue + e.key;
         display.textContent = displayValue;
     }
